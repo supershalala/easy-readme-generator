@@ -1,16 +1,46 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const { type } = require('os');
 
 // TODO: Include packages needed for this application
 
 // TODO: Create an array of questions for user input
-const questions = [];
+
+
+inquirer
+.prompt([
+
+   { type: 'input',
+    name: 'title',
+    message: 'What is the title of your project?',
+    },
+
+
+
+
+
+])
+.then( (answers) => {
+    const readmeContent = 
+`
+# ${answers.title}
+
+`;
+
+
+    fs.writeFile('README.md', readmeContent, (err) => {
+        if (err) throw err;
+        console.log('README file generated successfully!');
+      });
+      
+    
+});
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+
 
 // TODO: Create a function to initialize app
-function init() {}
+
 
 // Function call to initialize app
-init();
+
