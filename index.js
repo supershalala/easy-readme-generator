@@ -70,6 +70,48 @@ inquirer
       message: "Enter your custom option:",
       when: (answers) => answers.installation === "Other",
     },
+
+    {
+      type: 'input',
+      name: 'image',
+      message: 'Enter the URL of the image you want to include in your README:',
+    },
+
+    {
+      type: "list",
+      name: "contribution",
+      message: " Contribution instructions - Select an option:",
+      choices: [
+        `
+        ### To contribute to our project, please follow these steps:
+
+        - Fork the repository and create a new branch for your changes.
+        - Make your changes and commit them to your branch.
+        - Push your changes to your forked repository.
+        - Submit a pull request to our repository.
+        - Please provide a clear and descriptive title for your pull request, along with a detailed description of the changes you have made. We also ask that you include any relevant tests or documentation updates with your changes.
+        `,
+
+        new inquirer.Separator(),
+        "Other",
+      ],
+      default: "Option A",
+    },
+    {
+      type: "input",
+      name: "otherContribution",
+      message: "Enter your custom contribution option:",
+      when: (answers) => answers.contribution === "Other",
+    },
+
+    {
+      type: 'input',
+      name: 'image',
+      message: 'Enter the URL of the image you want to include in your README:',
+    },
+
+
+
   ])
   .then((answers) => {
     let licenseBadge;
@@ -85,6 +127,12 @@ inquirer
       answers.installation === "Other"
         ? answers.otherInstallation
         : answers.installation;
+
+
+    const contributionInstructions =
+    answers.contribution === "Other"
+      ? answers.otherContribution
+      : answers.contribution;
 
     const readmeContent = `
 
@@ -119,7 +167,15 @@ ${licenseBadge}
 
 ## Usage
 
+# Screenshot 
+
+${answers.image}
+
+
+
 ## Contributing
+
+${contributionInstructions}
 
 ## Tests
 
