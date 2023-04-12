@@ -24,6 +24,8 @@ const contributionDefaultChoice =
 - Submit a pull request to our repository.
 - Please provide a clear and descriptive title for your pull request, along with a detailed description of the changes you have made. We also ask that you include any relevant tests or documentation updates with your changes.
 `;
+
+const initializeApp = () => {
 inquirer
   .prompt([
     {
@@ -214,9 +216,10 @@ If you have any questions or feedback on the project, feel free to reach out to 
       console.log("README file generated successfully!");
     });
   });
-
+}
 // TODO: Create a function to write README file
 
 // TODO: Create a function to initialize app
 
 // Function call to initialize app
+initializeApp();
