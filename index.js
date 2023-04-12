@@ -119,6 +119,12 @@ inquirer
       name: 'image',
       message: 'Enter the URL of the image you want to include in your README:',
     },
+
+    {
+      type: "input",
+      name: "altText",
+      message: "Alt text for the image",
+    },
     {
       type: "input",
       name: "tests",
@@ -197,7 +203,8 @@ ${answers.usage}
 
 ### Screenshot 
 
-${answers.image}
+![${answers.altText}](${answers.image})
+
 
 
 
