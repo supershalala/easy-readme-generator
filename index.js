@@ -167,12 +167,12 @@ ${licenseBadge}
 
 ## Table of contents:
 
-- [Installation](#Installation)
-- [Usage](#Usage)
-- [Contributing](#Contributing)
-- [tests](#Tests)
-- [License](#License)
-- [Questions](#Questions)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [License](#license)
+- [Questions](#questions)
 
 ## Installation
 
