@@ -48,7 +48,7 @@ inquirer
     {
       type: "input",
       name: "problem",
-      message: "What problem deos it solve?",
+      message: "What problem does it solve?",
     },
 
     {
@@ -109,9 +109,20 @@ inquirer
     },
 
     {
+      type: "input",
+      name: "usage",
+      message: "How should your project be used?",
+    },
+
+    {
       type: 'input',
       name: 'image',
       message: 'Enter the URL of the image you want to include in your README:',
+    },
+    {
+      type: "input",
+      name: "tests",
+      message: "Please describe if any tests that are used for this project",
     },
 
     {
@@ -181,6 +192,8 @@ ${licenseBadge}
 - ${installationInstructions}
 
 ## Usage
+
+${answers.usage}
 
 ### Screenshot 
 
