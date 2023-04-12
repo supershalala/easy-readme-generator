@@ -14,6 +14,16 @@ const licenseChoices = [
   { name: "None", value: "none" },
 ];
 
+const contributionDefaultChoice = 
+`
+### To contribute to our project, please follow these steps:
+
+- Fork the repository and create a new branch for your changes.
+- Make your changes and commit them to your branch.
+- Push your changes to your forked repository.
+- Submit a pull request to our repository.
+- Please provide a clear and descriptive title for your pull request, along with a detailed description of the changes you have made. We also ask that you include any relevant tests or documentation updates with your changes.
+`;
 inquirer
   .prompt([
     {
@@ -82,16 +92,8 @@ inquirer
       name: "contribution",
       message: " Contribution instructions - Select an option:",
       choices: [
-        `
-        ### To contribute to our project, please follow these steps:
-
-        - Fork the repository and create a new branch for your changes.
-        - Make your changes and commit them to your branch.
-        - Push your changes to your forked repository.
-        - Submit a pull request to our repository.
-        - Please provide a clear and descriptive title for your pull request, along with a detailed description of the changes you have made. We also ask that you include any relevant tests or documentation updates with your changes.
-        `,
-
+      
+        contributionDefaultChoice,
         new inquirer.Separator(),
         "Other",
       ],
@@ -108,6 +110,17 @@ inquirer
       type: 'input',
       name: 'image',
       message: 'Enter the URL of the image you want to include in your README:',
+    },
+
+    {
+      type: "input",
+      name: "email",
+      message: "What is your contact email address?",
+    },
+    {
+      type: "input",
+      name: "git",
+      message: "What is your Git username?",
     },
 
 
@@ -167,7 +180,7 @@ ${licenseBadge}
 
 ## Usage
 
-# Screenshot 
+### Screenshot 
 
 ${answers.image}
 
@@ -183,8 +196,16 @@ ${contributionInstructions}
 
 This project is licensed under the ${answers.license} license.
 
+${licenseBadge}
+
 
 ## Questions
+
+If you have any questions or feedback on the project, feel free to reach out to me at:
+
+- Email: ${answers.email}
+- GitHub: https://github.com/${answers.git}
+
 
 `;
 
