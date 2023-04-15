@@ -92,7 +92,7 @@ inquirer
         {
       type: 'input',
       name: 'altText',
-      message: 'Enter the URL of the image you want to include in your README:',
+      message: 'Enter the alt text of the image',
     },
 
 
@@ -122,11 +122,6 @@ inquirer
     },
 
 
-    {
-      type: "input",
-      name: "altText",
-      message: "Alt text for the image",
-    },
     {
       type: "input",
       name: "tests",
