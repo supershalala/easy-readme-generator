@@ -175,8 +175,12 @@ ${licenseBadge}
 ## Description
 
 - ${answers.motivation}
+
+### Why
 - ${answers.why}
+### Problem this app solves
 - ${answers.problem}
+### Learnings
 - ${answers.learnings}
 
 
@@ -210,6 +214,8 @@ ${answers.usage}
 ${contributionInstructions}
 
 ## Tests
+
+${answers.test}
 
 ## License
 

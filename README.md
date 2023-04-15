@@ -2,17 +2,21 @@
 
 ![License](https://img.shields.io/badge/License-mit-green.svg)
 
-# Easy Readme Generator
+# Easy README Generator
 
 
 
 
 ## Description
 
-- To be able to quickly build readmes for my projects.
-- To test my knowledge of node and using node packages.
-- The repetitive task of making readmes.
-- How to use the inquirer package.
+- Readme files are an essential part of any software project, as they provide important information about the project, its purpose, and how to use it. However, creating a well-organized and informative readme file can be a time-consuming and challenging task. 
+
+### Why
+- TO save time and reduce errors while making highquality readmes easy to produce
+### Problem this app solves
+- The repetitive nature of producing readmes.
+### Learnings
+- Node js, inqurier and node file system
 
 
 
@@ -31,10 +35,11 @@
 
 ## Usage
 
-This project should be used in the terminal, please open the terminal at the index.js file. Then use node to execute. Once opened, follow the prompts.
+This project should be used in the command line. Please open in a code editor and opent the terminal at index.js. Then proceed to start the application by typing in node index.js
 
 ### Screenshot 
 
+![Screeshot of the app working](./assets/Screenshot%202023-04-12%20at%205.45.31%20pm.png)
 
 
 
