@@ -89,6 +89,13 @@ inquirer
       message: 'Enter the URL of the image you want to include in your README:',
     },
 
+        {
+      type: 'input',
+      name: 'altText',
+      message: 'Enter the URL of the image you want to include in your README:',
+    },
+
+
     {
       type: "list",
       name: "contribution",
@@ -114,11 +121,6 @@ inquirer
       message: "How should your project be used?",
     },
 
-    {
-      type: 'input',
-      name: 'image',
-      message: 'Enter the URL of the image you want to include in your README:',
-    },
 
     {
       type: "input",
